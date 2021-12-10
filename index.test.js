@@ -8,7 +8,7 @@ describe('Movie Database', () => {
       
         await sequelize.sync({ force: true });
        
-        const movie =  Movie.create({
+        const movie = await Movie.create({
             title: 'Get Out',
             //image: DataTypes.STRING,
             year: 2017,
@@ -18,7 +18,7 @@ describe('Movie Database', () => {
             genre: "thriller",
         })
        
-        const cast =  Cast.create({
+        const cast =  await Cast.create({
             name: "Daniel Kaluuya",
             //image: DataTypes.STRING,
             dob: '1989-02-24',
@@ -27,7 +27,7 @@ describe('Movie Database', () => {
             film_credits: 48
         })
 
-        const crew =  Crew.create({
+        const crew =  await Crew.create({
             name: "Jordan Peele",
             //image: DataTypes.STRING,
             dob: '1979-02-21',
@@ -36,9 +36,6 @@ describe('Movie Database', () => {
             film_credits: 18
         })
 
-        await Movie.create(movie)
-        await Cast.create(cast)
-        await Crew.create(crew)
     })
     
 

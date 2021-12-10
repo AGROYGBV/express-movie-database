@@ -18,7 +18,8 @@ const seedCast =  [{
     dob: '1989-02-24',
     role: "Chris Washington",
     //awards: DataTypes.STRING,
-    film_credits: 48
+    film_credits: 48,
+    MovieId: 1
 }]
 
 const seedCrew =  [{
@@ -27,7 +28,8 @@ const seedCrew =  [{
     dob: '1979-02-21',
     role: "Director, Writer",
     //awards: DataTypes.STRING,
-    film_credits: 18
+    film_credits: 18,
+    MovieId: 1
 }]
 
 
